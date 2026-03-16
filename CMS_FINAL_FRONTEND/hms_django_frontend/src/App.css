@@ -1,0 +1,17 @@
+/* App-specific styles */
+/* Global styles are in index.css */
+
+button {
+  cursor: pointer;
+  font-family: inherit;
+}
+
+button:hover {
+  opacity: 0.9;
+  transform: translateY(-1px);
+  transition: all 0.2s ease;
+}
+
+button:active {
+  transform: translateY(0);
+}
