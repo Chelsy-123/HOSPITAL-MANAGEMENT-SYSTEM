@@ -12,7 +12,7 @@ The system includes role-based modules for different hospital staff such as doct
 
 - Django
 - Django REST Framework
-- SQLite / PostgreSQL
+- MySQL
 - JWT Authentication
 
 ### Frontend
