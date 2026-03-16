@@ -1,4 +1,6 @@
-# admin_app/management/commands/populate_db.py
+# This command populates the database with sample data for development/testing only.
+# Default credentials are not intended for production use.
+# # admin_app/management/commands/populate_db.py
 from django.core.management.base import BaseCommand
 from django.utils import timezone
 from datetime import timedelta
