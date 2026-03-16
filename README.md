@@ -1,116 +1,193 @@
-\# Hospital Management System
+# Hospital Management System
 
+A full-stack Hospital Management System designed to manage hospital operations efficiently.
 
+The system includes role-based modules for different hospital staff such as doctors, receptionists, pharmacists, and lab technicians. The platform helps streamline hospital workflows such as appointment management, consultations, prescriptions, pharmacy management, and laboratory test management.
 
-A full-stack Hospital Management System designed to manage hospital operations efficiently.  
+---
 
-The system includes role-based modules for different hospital staff such as doctors, receptionists, pharmacists, and lab technicians.
+## Tech Stack
 
+### Backend
 
+- Django
+- Django REST Framework
+- SQLite / PostgreSQL
+- JWT Authentication
 
-\## Tech Stack
+### Frontend
 
+- React.js
+- Bootstrap
 
+---
 
-Backend:
+## Project Architecture
 
-\- Django
+The system follows a modular Django architecture with separate apps for each hospital role.
 
-\- Django REST Framework
+Backend Structure
 
-\- SQLite / PostgreSQL
+cmsapiproject
+│
+├── admin_app
+├── doctor_app
+├── receptionist_app
+├── pharmacist_app
+├── lab_technician_app
+├── common
+└── manage.py
 
-\- JWT Authentication
+Each module handles role-specific operations while sharing common authentication and database layers.
 
+---
 
+## Modules
 
-Frontend:
+The system contains the following role-based modules:
 
-\- React.js
+### Admin Module
 
-\- Bootstrap
+- Manage hospital staff
+- Manage system configurations
 
+### Receptionist Module
 
+- Register patients
+- Schedule appointments
+- Manage patient records
 
-\## Modules
+### Doctor Module
 
+- View daily appointments
+- Create consultation records
+- Generate prescriptions
+- Prescribe medicines and lab tests
 
+### Pharmacist Module
 
-\- Admin Module
+- Manage medicine inventory
+- Process medicine prescriptions
 
-\- Receptionist Module
+### Lab Technician Module
 
-\- Doctor Module
+- Manage lab tests
+- Process lab test prescriptions
+- Update test results
 
-\- Pharmacist Module
+---
 
-\- Lab Technician Module
+## My Contribution
 
+This was a **team project** where each team member was responsible for a specific module.
 
+I implemented the **Doctor Module**, which includes:
 
-\## My Contribution
+- Viewing patient appointments
+- Creating consultation records
+- Generating prescriptions
+- Adding multiple medicines in a prescription
+- Adding multiple lab test prescriptions
+- Linking consultation and prescription records
+- Managing consultation history
 
+The Doctor module enables doctors to efficiently manage patient consultations and prescribe medicines and lab tests.
 
+---
 
-I implemented the \*\*Doctor Module\*\*, which includes:
+## System Workflow
 
+1. Receptionist registers patients and schedules appointments.
+2. Doctors view appointments scheduled for the day.
+3. Doctors conduct consultations and create consultation records.
+4. Doctors generate prescriptions including medicines and lab tests.
+5. Pharmacists access medicine prescriptions and manage medicine inventory.
+6. Lab technicians access lab test prescriptions and perform laboratory tests.
 
+---
 
-\- Viewing patient appointments
+## Features
 
-\- Creating consultation records
+- Role-based access control
+- Secure authentication using JWT
+- Appointment management
+- Consultation management
+- Prescription generation
+- Medicine inventory management
+- Lab test management
+- Modular architecture using Django apps
+- RESTful APIs for frontend-backend communication
 
-\- Generating prescriptions
+---
 
-\- Adding multiple medicines in a prescription
+## Installation
 
-\- Adding multiple lab test prescriptions
+### Clone the Repository
 
-\- Linking consultation and prescription records
+git clone https://github.com/Chelsy-123/HOSPITAL-MANAGEMENT-SYSTEM.git
 
+---
 
+### Backend Setup
 
-\## System Workflow
+cd CMD_FINAL_BACKEND/hms_new_full/Backend
+python -m venv myvenv
+myvenv\Scripts\activate
+pip install -r requirements.txt
 
+Run migrations:
 
+cd cmsapiproject
+python manage.py migrate
 
-1\. Receptionist schedules patient appointments.
+Run the backend server:
 
-2\. Doctor views appointments for the day.
+python manage.py runserver
 
-3\. Doctor creates consultation records.
+---
 
-4\. After consultation, a prescription is generated.
+### Frontend Setup
 
-5\. Pharmacists access medicine prescriptions.
+cd CMS_FINAL_FRONTEND
+npm install
+npm start
 
-6\. Lab technicians access lab test prescriptions.
+---
 
+## Development Test Credentials
 
+These credentials are used for development and testing purposes only.
 
-\## Features
+Admin
+Username: admin
+Password: admin123
 
+Doctor
+Username: doctor1
+Password: doc123
 
+Receptionist
+Username: receptionist1
+Password: recep123
 
-\- Role-based access control
+Pharmacist
+Username: pharmacist1
+Password: pharm123
 
-\- Appointment management
+Lab Technician
+Username: labtech1
+Password: lab123
 
-\- Consultation management
+---
 
-\- Prescription generation
+## Note
 
-\- Medicine and lab test management
+This project was developed as a **team project**, where different modules were implemented by different team members.
 
-\- Secure authentication
+My responsibility was implementing the **Doctor Module**, including consultation management and prescription generation using Django REST Framework.
 
+---
 
+## License
 
-\## Note
-
-
-
-This was a \*\*team project\*\*, where different modules were implemented by different team members.  
-
-My responsibility was developing the \*\*Doctor Module\*\*.
-
+This project is for educational and learning purposes.
